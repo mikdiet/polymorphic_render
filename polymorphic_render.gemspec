@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "Extend rails views rendering"
   s.description = "Extend rails views rendering"
 
-  s.files = Dir["{app,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "> 3.0"
