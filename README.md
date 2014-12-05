@@ -1,6 +1,15 @@
 PolymorphicRender
 =================
 
+Installing
+----------
+
+Add in your gemfile
+
+```ruby
+gem 'polymorphic_render'
+```
+
 Using
 -----
 
