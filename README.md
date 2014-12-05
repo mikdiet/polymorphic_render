@@ -42,6 +42,16 @@ But if you write:
 
 It renders `views/models/_model_admin` partial and passes `model` local variable into.
 
+Array can be passed as second parameter:
+
+```haml
+= polymorphic_render @model, [:super, :admin]
+-# or
+= polymorphic_render @models, [:super, :admin]
+```
+
+It renders `views/models/_model_super_admin` partial and passes `model` local variable into.
+
 When it's useful?
 -----------------
 

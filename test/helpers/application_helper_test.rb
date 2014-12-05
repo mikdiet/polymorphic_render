@@ -20,6 +20,11 @@ class PolymorphicRender::ApplicationHelperTest < ActionView::TestCase
     assert_equal "Edit: My First Post\n", polymorphic_render(@post1, :admin)
   end
 
+  test 'complex namespaced rendering' do
+    assert_equal "Edit: My First Post\n", polymorphic_render(@post1, ['', :admin])
+    assert_equal "Destroy: My First Post\n", polymorphic_render(@post1, [:super, :admin])
+  end
+
   test 'namespaced collection rendering' do
     assert_equal "Edit: My First Post\nEdit: I am Blogger!\n", polymorphic_render(Post.all, :admin)
   end

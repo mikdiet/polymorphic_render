@@ -2,7 +2,7 @@ module PolymorphicRender
   module ApplicationHelper
     def polymorphic_render(resource, suffix = nil)
       if resource.is_a? ActiveRecord::Base
-        path = [resource.to_partial_path, suffix.presence].compact.join('_')
+        path = [resource.to_partial_path, *Array(suffix)].select(&:present?).join('_')
         name = File.basename(resource.to_partial_path)
         render partial: path, object: resource, as: name
       else
